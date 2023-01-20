@@ -23,14 +23,14 @@ btn.addEventListener("click", () => {
 
     if (splitCheck === split) {
       splitCheck = 0;
-      split = null;
       process.style.display = "none";
       done.style.display = "block";
       process.textContent = null;
-      statusBarInside.style.width = 0 + "%";
+
       setInterval(() => {
         process.style.display = "block";
         done.style.display = "none";
+        statusBarInside.style.width = 0 + "%";
       }, 1000);
     } else if (splitCheck >= split) {
       splitCheck = 0;
