@@ -27,9 +27,10 @@ btn.addEventListener("click", () => {
   let split = parseInt(statusInputSub.value);
   statusInputSub.disabled = true;
 
-  if (split > 25 || split < 0 || isNaN(split)) {
+  if (split > 25 || split <= 0 || isNaN(split)) {
     alert("값이 바르지 않으니까 다시 입력 (1-25 사이의 정수만 입력)");
     statusInputSub.disabled = false;
+    statusInputSub.value = null;
     return;
   } else {
     statusBarInside.style.width = (100 / split) * (splitCheck + 1) + "%";
