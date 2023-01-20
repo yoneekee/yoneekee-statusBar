@@ -9,27 +9,35 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="statusBar">
-        <div class="statusBar_inside"></div>
+    <div class="container">
+      <div class="header">
+        <div class="statusBar">
+          <div class="statusBar_inside"></div>
+        </div>
       </div>
-    </header>
-    <main class="main">
-      <div class="status-input">
-        <h3>몇 번 만에 status bar를 채우겠습니까?</h3>
-        <input
-          type="text"
-          class="status-input-sub"
-          placeholder="1-25 사이의 숫자만 입력하세요."
-        />
+      <div class="main">
+        <div class="status-input">
+          <h3>몇 번 만에 status bar를 채우겠습니까?</h3>
+          <input
+            type="text"
+            class="status-input-sub"
+            placeholder="1-25 사이의 숫자만 입력하세요."
+          />
+        </div>
+        <div class="status-process">
+          <h1 class="status-process-txt"></h1>
+        </div>
+        <div class="status-done">
+          <h1 class="status-done-txt">♥︎</h1>
+        </div>
+        <a href="#" class="btn">진행하기</a>
+        <div class="cover">
+          <div class="cover_txt">
+            <h1>다 채워졌습니다!</h1>
+            <a href="#" class="restart">게임 다시 하기</a>
+          </div>
+        </div>
       </div>
-      <div class="status-process">
-        <h1 class="status-process-txt"></h1>
-      </div>
-      <div class="status-done">
-        <h1 class="status-done-txt">완료되었습니다!</h1>
-      </div>
-      <a href="#" class="btn">진행하기</a>
-    </main>
+    </div>
   </body>
 </html>

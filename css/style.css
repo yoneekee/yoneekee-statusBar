@@ -1,22 +1,23 @@
-* {
-  margin: 0 auto;
-  width: 1000px;
-}
-
 a {
   text-decoration: none;
 }
 
+.container {
+  margin: 100px auto;
+  padding: 100px;
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
+  margin: 50px auto;
   width: 90%;
   height: 100px;
 }
 .header .statusBar {
-  width: 100%;
+  margin: 10px auto;
+  width: 80%;
   height: 100px;
   background: rgb(232, 232, 232);
   background: linear-gradient(0deg, rgb(232, 232, 232) 0%, rgb(255, 255, 255) 35%, rgb(138, 144, 145) 100%);
@@ -33,7 +34,7 @@ a {
   text-align: center;
 }
 .main .status-input {
-  margin: 20px;
+  margin: 20px 0;
 }
 .main .status-input h3 {
   width: 60%;
@@ -44,15 +45,52 @@ a {
   width: 30%;
   height: 20px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .main .status-done {
   display: none;
 }
-
-.btn {
+.main .cover {
+  display: none;
+  padding: 100px;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.main .cover_txt {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 200px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.main .cover_txt .restart {
+  color: black;
+  background-color: #fff;
+  width: 200px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 200px;
+}
+.main .cover_txt .restart:hover {
+  background-color: black;
+  color: white;
+}
+.main .btn {
   width: 200px;
   margin: 10px auto;
   display: flex;
@@ -63,9 +101,8 @@ a {
   color: black;
   border: 1px black solid;
   border-radius: 20px;
-  width: 200px;
 }
-.btn:hover {
+.main .btn:hover {
   background-color: gray;
   border: none;
   color: white;

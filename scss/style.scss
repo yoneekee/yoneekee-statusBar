@@ -5,23 +5,25 @@
   justify-content: center;
 }
 
-* {
-  margin: 0 auto;
-  width: 1000px;
-}
-
 a {
   text-decoration: none;
 }
 
+.container {
+  margin: 100px auto;
+  padding: 100px;
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
 .header {
-  @include center();
-  margin-top: 100px;
+  margin: 50px auto;
   width: 90%;
   $h: 100px;
   height: $h;
   .statusBar {
-    width: 100%;
+    margin: 10px auto;
+    width: 80%;
     height: $h;
     background: rgb(232, 232, 232);
     background: linear-gradient(
@@ -47,8 +49,9 @@ a {
 
 .main {
   text-align: center;
+
   .status-input {
-    margin: 20px;
+    margin: 20px 0;
     h3 {
       width: 60%;
       margin: 0 auto;
@@ -58,27 +61,67 @@ a {
       width: 30%;
       height: 20px;
       text-align: center;
-      @include center();
+      //@include center();
     }
   }
 
   .status-done {
     display: none;
   }
-}
-.btn {
-  width: 200px;
-  margin: 10px auto;
-  @include center();
-  padding: 10px 20px;
-  margin: 20px auto;
-  color: black;
-  border: 1px black solid;
-  border-radius: 20px;
-  width: 200px;
-  &:hover {
-    background-color: gray;
-    border: none;
-    color: white;
+
+  .cover {
+    display: none;
+    padding: 100px;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    &_txt {
+      color: rgb(0, 0, 0);
+      @include center();
+      flex-direction: column;
+      width: 50%;
+      margin: 200px auto;
+      background-color: rgba(#fff, 0.9);
+
+      .restart {
+        color: black;
+        background-color: #fff;
+        width: 200px;
+        margin: 10px auto;
+        @include center();
+        padding: 10px 20px;
+        margin: 20px auto;
+        color: black;
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 200px;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+  .btn {
+    width: 200px;
+    margin: 10px auto;
+    @include center();
+    padding: 10px 20px;
+    margin: 20px auto;
+    color: black;
+    border: 1px black solid;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: gray;
+      border: none;
+      color: white;
+    }
   }
 }
