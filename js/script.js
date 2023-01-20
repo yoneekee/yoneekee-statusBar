@@ -1,5 +1,4 @@
 const btn = document.querySelector(".btn");
-const statusBar = document.querySelector(".statusBar");
 const statusBarInside = document.querySelector(".statusBar_inside");
 const statusInputSub = document.querySelector(".status-input-sub");
 const process = document.querySelector(".status-process-txt");
@@ -22,7 +21,6 @@ btn.addEventListener("click", () => {
     process.textContent = splitCheck + "/" + split;
 
     if (splitCheck === split) {
-      splitCheck = 100;
       process.style.display = "none";
       done.style.display = "block";
       statusInputSub.value = null;
