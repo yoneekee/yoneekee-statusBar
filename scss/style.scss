@@ -1,0 +1,84 @@
+// 변수 및 함수 설정
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  @include center();
+  margin-top: 100px;
+  width: 90%;
+  $h: 100px;
+  height: $h;
+  .statusBar {
+    width: 100%;
+    height: $h;
+    background: rgb(232, 232, 232);
+    background: linear-gradient(
+      0deg,
+      rgba(232, 232, 232, 1) 0%,
+      rgba(255, 255, 255, 1) 35%,
+      rgba(138, 144, 145, 1) 100%
+    );
+
+    .statusBar_inside {
+      margin: 0;
+      width: 0;
+      height: $h;
+      background: rgb(63, 94, 251);
+      background: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+      );
+    }
+  }
+}
+
+.main {
+  text-align: center;
+  .status-input {
+    margin: 20px;
+    h3 {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &-sub {
+      width: 30%;
+      height: 20px;
+      text-align: center;
+      @include center();
+    }
+  }
+
+  .status-done {
+    display: none;
+  }
+}
+.btn {
+  width: 200px;
+  margin: 10px auto;
+  @include center();
+  padding: 10px 20px;
+  margin: 20px auto;
+  color: black;
+  border: 1px black solid;
+  border-radius: 20px;
+  width: 200px;
+  &:hover {
+    background-color: gray;
+    border: none;
+    color: white;
+  }
+}
