@@ -23,7 +23,6 @@ btn.addEventListener("click", () => {
     if (splitCheck === split) {
       process.style.display = "none";
       done.style.display = "block";
-      statusInputSub.value = null;
       process.textContent = null;
       btn.style.display = "none";
       console.log("1.splitCheck : " + splitCheck);
@@ -42,6 +41,7 @@ btn.addEventListener("click", () => {
 });
 
 restart.addEventListener("click", () => {
+  statusInputSub.value = null;
   statusBarInside.style.width = 0 + "%";
   splitCheck = 0;
   btn.style.display = "block";
