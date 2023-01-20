@@ -20,21 +20,22 @@ btn.addEventListener("click", () => {
     splitCheck++;
 
     process.textContent = splitCheck + "/" + split;
+  }
 
-    if (splitCheck === split) {
-      splitCheck = 0;
-      process.style.display = "none";
-      done.style.display = "block";
-      process.textContent = null;
+  if (splitCheck === split) {
+    process.style.display = "none";
+    done.style.display = "block";
+    process.textContent = null;
 
-      setInterval(() => {
-        process.style.display = "block";
-        done.style.display = "none";
-        statusBarInside.style.width = 0 + "%";
-      }, 1000);
-    } else if (splitCheck >= split) {
+    setInterval(() => {
       splitCheck = 0;
-      alert("중간에 값을 재입력하면 안됨");
-    }
+      process.style.display = "block";
+      done.style.display = "none";
+      statusBarInside.style.width = 0 + "%";
+      statusInputSub.textContent = "값 재입력";
+    }, 1000);
+  } else if (splitCheck >= split) {
+    splitCheck = 0;
+    alert("허용되지 않은 행위 발생");
   }
 });
